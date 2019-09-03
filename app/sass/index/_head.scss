@@ -1,0 +1,112 @@
+.main-page__logo {
+	height: 65px;
+	display: flex;
+	align-items: center;
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+
+.main-page__logo-img {
+	width: 33px;
+	height: 38px;
+}
+
+@media (min-width: 768px) {
+	.main-page__logo-img {
+		width: 173px;
+		height: 58px;
+	}
+}
+
+@media (min-width: 1250px) {
+	.main-page__logo-img {
+		width: 202px;
+		height: 59px;
+	}
+}
+
+.main-page__logo-description {
+	font-size: 18px;
+	text-transform: uppercase;
+	margin: 0 auto;
+	position: relative;
+	left: -25px;
+	.logo-description__first-word {
+		font-weight: bold;
+	}
+	.logo-description__second-word {
+		font-weight: normal;
+	}
+}
+
+.main-page__mobile-nav__list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+.main-page__mobile-nav__item {
+	width: 100%;
+	height: 65px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	border-top: 1px solid #F2F2F2;
+	&:last-child {
+		border-bottom: 1px solid #F2F2F2;
+	}
+}
+
+.main-page__header-block {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-page__title-block {
+	width: 100%;
+	min-height: 305px;
+	text-align: center;
+	color: #fff;
+	background: url(../images/Index/Head/Mobile/Background-mobile.jpg) no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+}
+
+.main-page__title-one {
+	display: block;
+	margin-bottom: 15px;
+	padding-top: 30px;
+	font-size: 36px;
+	line-height: 40px;
+}
+
+.main-page__title-two {
+	display: block;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.main-page__img-product {
+	width: 280px;
+	height: 271px;
+	margin-top: -136px;
+}
+
+.header-block__button-wrapper {
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+
+.header-block__button {
+	font-family: "Oswald", sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+}
