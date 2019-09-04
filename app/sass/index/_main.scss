@@ -85,7 +85,263 @@
 // Блок с преимуществами
 
 .advantages__wrapper {
-	width: 100%;
 	margin: 0 20px;
+	padding-bottom: 27px;
+	box-sizing: border-box;
 }
 
+.advantages__title {
+	font-size: 36px;
+	font-family: "Oswald", sans-serif;
+	font-weight: normal;
+}
+
+.advantages__item {
+	display: flex;
+	height: 60px;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.advantages__item-img {
+	min-width: 60px;
+	height: 60px;
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	margin-right: 20px;
+	background-color: #68B738;
+	&::before {
+		content: "";
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		top: 5px;
+		left: 5px;
+		background-size: 60px 60px;
+	}
+}
+
+.advantages__img {
+	&-1::before {
+		background: url(../images/Index/Advantages/advantage-1.svg) no-repeat;
+	}
+	&-2::before {
+		background: url(../images/Index/Advantages/advantage-2.svg) no-repeat;
+	}
+	&-3::before {
+		background: url(../images/Index/Advantages/advantage-3.svg) no-repeat;
+	}
+	&-4::before {
+		background: url(../images/Index/Advantages/advantage-4.svg) no-repeat;
+	}
+}
+
+.advantages__item-description {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+// Блок До и После
+
+.before-after {
+	width: 100%;
+	background-color: #F2F2F2;
+	&__wrapper {
+		padding: 20px;
+	}
+}
+
+.before-after__title {
+	margin: 0;
+	font-size: 36px;
+	font-weight: normal;
+}
+
+.before-after__description {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.before-after__features__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.before-after__features__item {
+	width: 124px;
+	height: 55px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0 20px;
+	font-size: 23.6px;
+	text-transform: uppercase;
+	border: 1px solid #CDCDCD;
+	border-radius: 3px;
+	&::after {
+		content: "";
+		width: 80px;
+		height: auto;
+		position: absolute;
+		bottom: -17px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		line-height: 12px;
+		text-align: center;
+		text-transform: lowercase;
+		background-color: #f2f2f2;
+	}
+}
+
+.features__item {
+	&-1::after {
+		content: "снижение веса";
+	}
+	&-2::after {
+		content: "затрачено времени";
+	}
+}
+
+.before-after__title-two {
+	margin-bottom: 20px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-align: center;
+}
+
+.before-after__img-wrapper {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 80px;
+}
+
+.before-after__img-after {
+	display: none;
+}
+
+.before-after__radio {
+	display: none;
+}
+
+// Блок Котакты
+
+.contacts__wrapper {
+	margin-bottom: -4px;
+}
+
+.contacts__invite-address__wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 26.3px 0 25px;
+	padding: 0 20px;
+}
+
+.contacts__invite,
+.contacts__address {
+	width: 140px;
+	display: block;
+}
+
+.contacts__invite {
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.contacts__address {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.contacts__img-map {
+	width: 100%;
+	height: 362px;
+	object-fit: cover;
+}
+
+// Подвал
+
+.footer__block {
+	width: 100%;
+	height: 100%;
+	background-color: #F2F2F2;
+}
+
+.footer__wrapper {
+	padding-top: 10px;
+}
+
+.footer__link-block {
+	width: 100%;
+	font-size: 24px;
+	text-transform: uppercase;
+	cursor: pointer;
+	&__one {
+		font-weight: bold;
+		display: block;
+		margin-right: 8px;
+	}
+	&__two {
+		font-weight: normal;
+		display: block;
+	}
+}
+
+.footer__link {
+	width: 100%;
+	height: 85px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__socials-block {
+	height: 62px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid #CDCDCD;
+}
+
+.footer__social-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+
+.footer__social-icons__item {
+	width: 30px;
+	height: 30px;
+	&:nth-child(even) {
+		margin: 0 20px;
+	}
+}
+
+.footer__insta,
+.footer__vk,
+.footer__fb {
+	width: 30px;
+	height: 30px;
+}
+
+.footer__insta {
+	background: url(../images/Index/Footer/Mobile/m-insta.svg) no-repeat;
+	background-position: center center;
+}
+
+.footer__vk {
+	background: url(../images/Index/Footer/Mobile/m-vk.svg) no-repeat;
+	background-position: center center;
+}
+
+.footer__fb {
+	background: url(../images/Index/Footer/Mobile/m-fb.svg) no-repeat;
+	background-position: center center;
+}
