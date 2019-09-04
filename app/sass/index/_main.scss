@@ -215,18 +215,96 @@
 }
 
 .before-after__img-wrapper {
+	max-width: 200px;
 	display: flex;
 	justify-content: center;
 	padding-bottom: 80px;
+	position: relative;
+	margin: 0 auto;
 }
 
 .before-after__img-after {
 	display: none;
 }
 
+.before-after__radio-before,
+.before-after__radio-after {
+	position: absolute;
+	appearance: none;
+}
+
 .before-after__radio {
+	display: block;
+}
+
+.before-after__before-label {
+	position: absolute;
+	bottom: 36px;
+	left: 10px;
+}
+
+.before-after__after-label {
+	position: absolute;
+	bottom: 36px;
+	right: 10px;
+}
+
+.before__radio-customize {
+	width: 84px;
+	height: 14px;
+	display: block;
+	position: absolute;
+	bottom: 38px;
+	background-color: #fff;
+	border: 1px solid #CDCDCD;
+	border-radius: 10px;
+	&::before {
+		content: "";
+		width: 35px;
+		height: 6px;
+		position: absolute;
+		background-color: #68B738;
+		border-radius: 10px;
+		top: 4px;
+		left: 6px;
+	}
+}
+
+.after__radio-customize {
+	width: 84px;
+	height: 14px;
+	display: block;
+	position: absolute;
+	bottom: 38px;
+	background-color: #fff;
+	border: 1px solid #CDCDCD;
+	border-radius: 10px;
+	&::after {
+		content: "";
+		width: 35px;
+		height: 6px;
+		position: absolute;
+		background-color: #68b738;
+		border-radius: 10px;
+		top: 4px;
+		right: 6px;
+	}
+}
+
+.before-after__radio-before:checked ~ .before-after__img-before,
+.before-after__radio-after:checked ~ .before-after__img-after,
+.before-after__radio-before:checked ~ .before__radio-customize,
+.before-after__radio-after:checked ~ .after__radio-customize {
+	display: block;
+}
+
+.before-after__radio-before:checked ~ .before-after__img-afer,
+.before-after__radio-after:checked ~ .before-after__img-before,
+.before-after__radio-before:checked ~ .after__radio-customize,
+.before-after__radio-after:checked ~ .before__radio-customize {
 	display: none;
 }
+
 
 // Блок Котакты
 
