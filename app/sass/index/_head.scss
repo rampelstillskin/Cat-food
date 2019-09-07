@@ -61,6 +61,34 @@
 	}
 }
 
+@media (min-width: 768px) {
+	.main-page__logo-description {
+		display: none;
+	}
+	.main-page__mobile-nav {
+		display: none;
+	}
+	.main-page__nav-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 20px;
+		padding-right: 31px;
+	}
+	.main-page__list {
+		display: flex;
+		text-transform: uppercase;
+		.current {
+			border-bottom: 2px solid #68B738;
+		}
+	}
+	.main-page__item {
+		&:nth-child(even) {
+			margin: 0 34px 7px;
+		}
+	}
+}
+
 .main-page__header-block {
 	width: 100%;
 	display: flex;
@@ -78,24 +106,64 @@
 	background-position: center;
 }
 
+@media (min-width: 768px) {
+	.main-page__header-block {
+		max-width: 709px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin: 0 auto;
+	}
+	.main-page__title-block {
+		display: flex;
+		flex-direction: column;
+		padding-left: 87px;
+		text-align: start;
+		color: #000;
+		background: none;
+	}
+}
+
 .main-page__title-one {
-	display: block;
+	margin: 0;
 	margin-bottom: 15px;
 	padding-top: 30px;
 	font-size: 36px;
+	font-weight: normal;
 	line-height: 40px;
 }
 
 .main-page__title-two {
-	display: block;
+	margin: 0;
 	font-size: 14px;
+	font-weight: normal;
 	text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+	.main-page__title-one {
+		font-size: 60px;
+		margin-bottom: 35px;
+		line-height: 60px;
+	}
+	.main-page__title-two {
+		font-size: 20px;
+	}
 }
 
 .main-page__img-product {
 	width: 280px;
 	height: 271px;
 	margin-top: -136px;
+}
+
+@media (min-width: 768px) {
+	.main-page__img-product {
+		width: 709px;
+		height: 609px;
+		margin-left: -180px;
+		margin-top: -75px;
+	}
 }
 
 .header-block__button-wrapper {
@@ -109,4 +177,19 @@
 	font-family: "Oswald", sans-serif;
 	color: #fff;
 	text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+	.header-block__button-wrapper {
+		width: 245px;
+		height: 52px;
+		position: absolute;
+		top: 262px;
+		left: 45px;
+		padding: 0;
+	}
+	.header-block__button {
+		font-size: 20px;
+		font-weight: normal;
+	}
 }

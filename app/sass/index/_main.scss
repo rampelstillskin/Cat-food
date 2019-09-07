@@ -13,6 +13,9 @@
 	position: relative;
 	margin: 22px 0 20px;
 	background-color: #F2F2F2;
+	@media (min-width: $tablet) {
+		min-height: 372px;
+	}
 }
 
 .categories__item__title {
@@ -28,17 +31,24 @@
 		width: 50px;
 		height: 50px;
 		position: absolute;
-		top: 0;
-		left: 0;
 		background-color: #68B738;
 		border: none;
 		border-radius: 50%;
 	}
 }
 
-.title-one::after {
-	left: -7px;
-	top: 3px;
+.title-one {
+	&::after {
+		left: -7px;
+		top: 3px;
+		@media (min-width: $tablet) {
+			width: 200px;
+			height: 200px;
+			top: 92px;
+			left: auto;
+			right: 60px;
+		}
+	}
 }
 
 .title-two {
@@ -47,21 +57,71 @@
 	&::after {
 		left: 9px;
 		top: -7px;
+		@media (min-width: $tablet) {
+			width: 200px;
+			height: 200px;
+			top: 92px;
+			left: auto;
+			right: 60px;
+		}
+	}
+}
+
+@media (min-width: $tablet) {
+	.categories__item__title {
+		position: static;
+		margin: 70px 0 0 55px;
 	}
 }
 
 .categories__item__title-img {
 	margin-right: 26px;
 	z-index: 1;
+	@media (min-width: $tablet) {
+		position: absolute;
+		right: 0;
+		width: 120px;
+		height: 194px;
+		top: 20px;
+	}
+}
+
+.title-img-one {
+	width: 40px;
+	height: 54px;
+	@media (min-width: $tablet) {
+		width: 140px;
+		height: 194px;
+		top: 84px;
+		right: 62px;
+	}
 }
 
 .title-img-two {
+	width: 67px;
+	height: 28px;
 	margin-right: 11px;
+	@media (min-width: $tablet) {
+		width: 268px;
+		height: 112px;
+		top: 140px;
+		right: 18px;
+	}
 }
 
 .categories__item__description {
 	margin: 25px 20px 0 20px;
 	font-family: Arial, Helvetica, sans-serif;
+	@media (min-width: $tablet) {
+		width: 55%;
+		margin: 25px 0 0 55px;
+	}
+}
+
+@media (min-width: 768px) {
+	.categories__item__title-description {
+		font-size: 36px;
+	}
 }
 
 .categories__item__link-wrapper {
@@ -70,6 +130,9 @@
 	padding-right: 20px;
 	box-sizing: border-box;
 	cursor: pointer;
+	@media (min-width: $tablet) {
+		padding-left: 54px;
+	}
 }
 
 .categories__item__link {
@@ -80,69 +143,133 @@
 	margin-top: 25px;
 	text-transform: uppercase;
 	border-top: 1px solid rgba(112, 112, 112, .1);
+	@media (min-width: $tablet) {
+		margin: 0;
+		margin-top: 52px;
+		font-size: 20px;
+		border: none;
+	}
 }
 
 // Блок с преимуществами
 
 .advantages__wrapper {
-	margin: 0 20px;
-	padding-bottom: 27px;
-	box-sizing: border-box;
+	padding: 0 20px; 
 }
 
 .advantages__title {
 	font-size: 36px;
-	font-family: "Oswald", sans-serif;
 	font-weight: normal;
+	@media (min-width: $tablet) {
+		margin-top: 0;
+		font-size: 60px;
+	}
+}
+
+@media (min-width: $tablet) {
+	.advantages__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
 .advantages__item {
-	display: flex;
+	width: 100%;
 	height: 60px;
-	align-items: center;
-	margin-bottom: 20px;
-}
-
-.advantages__item-img {
-	min-width: 60px;
-	height: 60px;
-	display: block;
 	position: relative;
-	margin: 0;
-	padding: 0;
-	margin-right: 20px;
-	background-color: #68B738;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
 	&::before {
 		content: "";
 		width: 60px;
 		height: 60px;
 		position: absolute;
-		margin: 0;
-		padding: 0;
-		top: 5px;
-		left: 5px;
-		background-size: 60px 60px;
+		left: 0;
+	}
+	@media (min-width: $tablet) {
+		width: 320px;
+		height: 235px;
+		align-items: baseline;
+		margin-right: 45px;
+		&::before {
+			width: 80px;
+			height: 80px;
+		}
 	}
 }
 
-.advantages__img {
+.advantages__item-block {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding-left: 80px;
+	@media (min-width: $tablet) {
+		width: 248px;
+		margin-top: 115px;
+		padding-left: 0;
+		font-size: 16px;
+	}
+}
+
+.img {
 	&-1::before {
 		background: url(../images/Index/Advantages/advantage-1.svg) no-repeat;
+		background-color: #68B738;
+		background-position: center;
 	}
 	&-2::before {
 		background: url(../images/Index/Advantages/advantage-2.svg) no-repeat;
+		background-color: #68B738;
+		background-position: center;
 	}
+
 	&-3::before {
 		background: url(../images/Index/Advantages/advantage-3.svg) no-repeat;
+		background-color: #68B738;
+		background-position: center;
 	}
+
 	&-4::before {
 		background: url(../images/Index/Advantages/advantage-4.svg) no-repeat;
+		background-color: #68B738;
+		background-position: center;
 	}
+
 }
 
-.advantages__item-description {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
+@media (min-width: $tablet) {
+	.img-number {
+		position: absolute;
+		width: 134px;
+		height: 230px;
+		top: -110px;
+		font-size: 281px;
+		color: #F2F2F2;
+		z-index: -1;
+	}
+	.img {
+		&-1::after {
+			content: "1";
+			@extend .img-number;
+			right: 66px;
+		}
+		&-2::after {
+			content: "2";
+			right: 74px;
+			@extend .img-number;
+		}
+		&-3::after {
+			content: "3";
+			right: 72px;
+			@extend .img-number;
+		}
+		&-4::after {
+			content: "4";
+			right: 67px;
+			@extend .img-number;
+		}
+	}
 }
 
 // Блок До и После
@@ -153,21 +280,40 @@
 	&__wrapper {
 		padding: 20px;
 	}
+	@media (min-width: $tablet) {
+		background: linear-gradient(#fff 400px, #f2f2f2 400px);
+	}
+}
+
+@media (min-width: $tablet) {
+	.before-after__wrapper {
+		position: relative;
+	}
 }
 
 .before-after__title {
 	margin: 0;
 	font-size: 36px;
 	font-weight: normal;
+	@media (min-width: $tablet) {
+		font-size: 60px;
+	}
 }
 
 .before-after__description {
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	@media (min-width: $tablet) {
+		font-size: 16px;
+	}
 }
 
 .before-after__features__list {
 	display: flex;
 	justify-content: space-between;
+	@media (min-width: $tablet) {
+		justify-content: flex-start;
+	}
 }
 
 .before-after__features__item {
@@ -195,14 +341,34 @@
 		text-transform: lowercase;
 		background-color: #f2f2f2;
 	}
+	@media (min-width: $tablet) {
+		width: 160px;
+		height: 72px;
+		font-size: 30px;
+	}
 }
 
 .features__item {
 	&-1::after {
 		content: "снижение веса";
+		@media (min-width: $tablet) {
+			width: 115px;
+			bottom: -5px;
+			font-size: 14px;
+		}
+	}
+	&-1 {
+		@media (min-width: $tablet) {
+			margin-right: 43px;
+		}
 	}
 	&-2::after {
 		content: "затрачено времени";
+		@media (min-width: $tablet) {
+			width: 143px;
+			bottom: -5px;
+			font-size: 14px;
+		}
 	}
 }
 
@@ -212,6 +378,18 @@
 	text-transform: uppercase;
 	font-weight: normal;
 	text-align: center;
+	br {
+		display: none;
+	}
+	@media (min-width: $tablet) {
+		position: absolute;
+		top: 208px;
+		right: 20px;
+		text-align: end;
+		br {
+			display: block;
+		}
+	}
 }
 
 .before-after__img-wrapper {
