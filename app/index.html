@@ -9,51 +9,57 @@
 </head>
 <body>
 	<header class="main-page__header">
-		<div class="main-page__nav-wrapper">
-			<a href="#" class="main-page__logo">
-				<picture>
-					<source media="(min-width: 1250px)" srcset="images/Index/Head/Desktop/logo-desktop.svg">
-					<source media="(min-width: 768px)" srcset="images/Index/Head/Tablet/logo-tablet.svg">
-					<img src="images/Index/Head/Mobile/main-logo-mobile.svg" srcset="" alt="Cat-food"	class="main-page__logo-img">
-				</picture>
-				<div class="main-page__logo-description">
-					<span class="logo-description__first-word">cat</span>
-					<span class="logo-description__second-word">energy</span>
-				</div>
-			</a>
-			<nav class="main-page__mobile-nav">
-				<ul class="main-page__mobile-nav__list">
-					<li class="main-page__mobile-nav__item"><a href="">главная</a></li>
-					<li class="main-page__mobile-nav__item"><a href="">каталог продукции</a></li>
-					<li class="main-page__mobile-nav__item"><a href="">подбор программы</a></li>
-				</ul>
-			</nav>
-			<nav class="main-page__nav">
-				<ul class="main-page__list">
-					<li class="main-page__item current">
-						<a href="#" class="main-page__item-link">главная</a>
-					</li>
-					<li class="main-page__item">
-						<a href="catalog.html" class="main-page__item-link">каталог продукции</a>
-					</li>
-					<li class="main-page__item">
-						<a href="form.html" class="main-page__item-link">подбор программы</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<div class="main-page__header-block">
-			<div class="main-page__title-block">
-				<h1 class="main-page__title-one">Функциональное<br>питание для котов</h1>
-				<h3 class="main-page__title-two">занялся собой? займись и котом!</h3>
+		<div class="main-page__header-wrapper">
+			<div class="main-page__nav-wrapper">
+				<a href="#" class="main-page__logo">
+					<picture>
+						<source media="(min-width: 1250px)" srcset="images/Index/Head/Desktop/logo-desktop.svg">
+						<source media="(min-width: 768px)" srcset="images/Index/Head/Tablet/logo-tablet.svg">
+						<img src="images/Index/Head/Mobile/main-logo-mobile.svg" srcset="" alt="Cat-food"	class="main-page__logo-img">
+					</picture>
+					<div class="main-page__logo-description">
+						<span class="logo-description__first-word">cat</span>
+						<span class="logo-description__second-word">energy</span>
+					</div>
+				</a>
+				<nav class="main-page__mobile-nav">
+					<ul class="main-page__mobile-nav__list">
+						<li class="main-page__mobile-nav__item"><a href="">главная</a></li>
+						<li class="main-page__mobile-nav__item"><a href="">каталог продукции</a></li>
+						<li class="main-page__mobile-nav__item"><a href="">подбор программы</a></li>
+					</ul>
+					<button class="mobile-nav__button">
+						<span class="mobile-nav__burger"></span>
+					</button>
+				</nav>
+				<nav class="main-page__nav">
+					<ul class="main-page__nav-list">
+						<li class="main-page__nav-item current">
+							<a href="#" class="main-page__nav-item__link">главная</a>
+						</li>
+						<li class="main-page__nav-item">
+							<a href="catalog.html" class="main-page__nav-item__link">каталог продукции</a>
+						</li>
+						<li class="main-page__nav-item">
+							<a href="form.html" class="main-page__nav-item__link">подбор программы</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
-			<picture>
-				<source media="min-width: 1250px" srcset="images/Index/Head/Desktop/feed-desktop.png">
-				<source media="(min-width: 768px)" srcset="images/Index/Head/Tablet/feed-tablet.jpg">
-				<img src="images/Index/Head/Mobile/feed-mobile.png" alt="Корм" class="main-page__img-product">
-			</picture>
-			<div class="header-block__button-wrapper">
-				<button class="button header-block__button">подобрать программу</button>
+			<div class="main-page__header-block">
+				<div class="main-page__title-block">
+					<h1 class="main-page__title-one">Функциональное<br>питание для котов</h1>
+					<h3 class="main-page__title-two">занялся собой? займись и котом!</h3>
+				</div>
+					<picture>
+						<source media="(min-width: 1250px)" srcset="images/Index/Head/Desktop/feed-desktop.png">
+						<source media="(min-width: 768px)" srcset="images/Index/Head/Tablet/feed-tablet.jpg">
+						<img src="images/Index/Head/Mobile/feed-mobile.png" alt="Корм" class="main-page__img-product">
+					</picture>
+					<div class="header-block__button-wrapper">
+						<button class="button header-block__button">подобрать программу</button>
+					</div>
+
 			</div>
 		</div>
 	</header>
@@ -109,26 +115,36 @@
 		</section>
 		<section class="before-after">
 			<div class="before-after__wrapper">
-				<h1 class="before-after__title">Живой пример</h1>
-				<p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-				<div class="before-after__features__list">
-					<span class="before-after__features__item features__item-1">5 кг</span>
-					<span class="before-after__features__item features__item-2">60 дней</span>
+				<div class="before-after__block-left">
+					<h1 class="before-after__title">Живой пример</h1>
+					<p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+					<div class="before-after__features__list">
+						<span class="before-after__features__item features__item-1">5 кг</span>
+						<span class="before-after__features__item features__item-2">60 дней</span>
+					</div>
+					<div class="before-after__title-two">
+						<span class="before-after__title-two-1">затраты на питание:</span>
+						<span class="before-after__title-two-2">15 000 руб.</span>
+					</div>
 				</div>
-				<h3 class="before-after__title-two">затраты на питание:<br> 15 000 руб.</h3>
-			</div>
-			<div class="before-after__mobile before-after__img-wrapper">
-				<input type="radio" id="radio-one" class="before-after__radio-before" name="radio__before" checked>
-				<label class="before-after__before-label" for="radio-one">Было</label>
-				<input type="radio" id="radio-two" class="before-after__radio-after" name="radio__before">
-				<label class="before-after__after-label" for="radio-two">Стало</label>
-				<span class="before__radio-customize"></span>
-				<span class="after__radio-customize"></span>
-				<img src="images/Index/Before_after/Mobile/before-mobile.png" alt="Ваша кошка - До" class="before-after__img before-after__img-before">
-				<img src="images/Index/Before_after/Mobile/after-mobile.png" alt="Ваша кошка - После" class="before-after__img before-after__img-after">
-			</div>
-			<div class="before-after__tablet-desktop">
-				
+				<div class="before-after__block-right">
+					<div class="before-after__mobile before-after__img-wrapper">
+						<input type="radio" id="radio-one" class="before-after__radio-before" name="radio__before" checked>
+						<label class="before-after__before-label" for="radio-one">Было</label>
+						<input type="radio" id="radio-two" class="before-after__radio-after" name="radio__before">
+						<label class="before-after__after-label" for="radio-two">Стало</label>
+						<span class="before__radio-customize"></span>
+						<span class="after__radio-customize"></span>
+						<img src="images/Index/Before_after/Mobile/before-mobile.png" alt="Ваша кошка - До" class="before-after__img-mobile before-after__img-mobile-before">
+						<img src="images/Index/Before_after/Mobile/after-mobile.png" alt="Ваша кошка - После" class="before-after__img-mobile before-after__img-mobile-after">
+					</div>
+					<div class="before-after__tablet-desktop">
+						<img src="images/Index/Before_after/Tablet_Desktop/Before.png" alt="Ваша кошка - До" 
+						class="before-after__img before-after__img-before">
+						<img src="images/Index/Before_after/Tablet_Desktop/After.png" alt="Ваша кошка - После" class="before-after__img before-after__img-after ">
+						<input type="range" class="before-after__img-range">
+					</div>
+				</div>
 			</div>
 		</section>
 		<section class="contacts">
@@ -139,7 +155,11 @@
 					</span>
 					<span class="contacts__address">Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
 				</p>
-				<img src="images/Index/Contacts/Mobile/map-mobile-1.jpg" alt="Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" class="contacts__img-map">
+				<picture>
+					<source media="(min-width: 1250px)" srcset="images/Index/Contacts/Desktop/map-desktop.jpg">
+					<source media="(min-width: 768px)" srcset="images/Index/Contacts/Tablet/map-tablet.jpg">
+					<img src="images/Index/Contacts/Mobile/map-mobile-1.jpg" alt="Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" class="contacts__img-map">
+				</picture>
 			</div>
 		</section>
 	</main>
@@ -172,5 +192,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/_modal.js"></script>
 </body>
 </html>
