@@ -1,25 +1,63 @@
+// Голова
+
+.main-page__header-wrapper {
+	@media (min-width: $desktop) {
+		max-width: 1300px;
+		min-height: 696px;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		&::after {
+			content: "";
+			width: 50%;
+			height: 696px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: url(../images/Index/Head/Desktop/background-desktop.jpg) no-repeat;
+			background-position: center;
+			background-size: cover;
+			z-index: -1;
+		}
+	}
+}
+
+.main-page__nav-wrapper {
+	@media (min-width: $tablet) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 20px;
+		padding-right: 31px;
+	}
+	@media (min-width: $desktop) {
+		max-width: 1300px;
+		padding: 54px 40px 0;
+
+	}
+}
+
 .main-page__logo {
 	height: 65px;
 	display: flex;
 	align-items: center;
 	margin: 0 0 0 20px;
 	padding: 0;
+	@media (min-width: $tablet) {
+		margin-left: 31px;
+	}
+	@media (min-width: $desktop) {
+	}
 }
 
 .main-page__logo-img {
 	width: 33px;
 	height: 38px;
-}
-
-@media (min-width: 768px) {
-	.main-page__logo-img {
+	@media (min-width: $tablet) {
 		width: 173px;
 		height: 58px;
 	}
-}
-
-@media (min-width: 1250px) {
-	.main-page__logo-img {
+	@media (min-width: $desktop) {
 		width: 202px;
 		height: 59px;
 	}
@@ -37,6 +75,62 @@
 	.logo-description__second-word {
 		font-weight: normal;
 	}
+	@media (min-width: $tablet) {
+		display: none;
+	}
+}
+
+// Бургер меню
+
+.mobile-nav__button {
+	width: 24px;
+	height: 18px;
+	position: absolute;
+	top: 26px;
+	right: 30px;
+	border: none;
+	background-color: transparent;
+	.mobile-nav__burger {
+		width: 100%;
+		height: 2px;
+		display: block;
+		position: absolute;
+		top: 8px;
+		left: 0;
+		background-color: #000;
+		transition: background .6s;
+		&::before,
+		&::after {
+			content: "";
+			width: 100%;
+			height: 2px;
+			position: absolute;
+			left: 0;
+			background-color: #000;
+			transition: all .5s;
+		}
+		&::before {
+			top: -8px;
+		}
+		&::after {
+			bottom: -8px;
+		}
+	}
+}
+
+.mobile-nav__burger.mobile-nav__burger-close {
+	background-color: transparent;
+	transition: background .6s;
+	&::before {
+		transform: rotate(-45deg);
+		top: 0;
+		transition: all .5s;
+	}
+	&::after {
+		transform: rotate(45deg);
+		bottom: 0;
+		transition: all .5s;
+	}
 }
 
 .main-page__mobile-nav__list {
@@ -45,6 +139,10 @@
 	flex-direction: column;
 	margin: 0;
 	padding: 0;
+}
+
+.main-page__mobile-nav__show {
+	display: none;
 }
 
 .main-page__mobile-nav__item {
@@ -61,31 +159,40 @@
 	}
 }
 
-@media (min-width: 768px) {
-	.main-page__logo-description {
-		display: none;
+.main-page__nav {
+	display: none;
+	@media (min-width: $tablet) {
+		display: block;
 	}
+}
+
+@media (min-width: $tablet) {
 	.main-page__mobile-nav {
 		display: none;
 	}
-	.main-page__nav-wrapper {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-top: 20px;
-		padding-right: 31px;
-	}
-	.main-page__list {
+	.main-page__nav-list {
 		display: flex;
 		text-transform: uppercase;
 		.current {
 			border-bottom: 2px solid #68B738;
 		}
 	}
-	.main-page__item {
+	.main-page__nav-item {
 		&:nth-child(even) {
 			margin: 0 34px 7px;
 		}
+	}
+}
+
+@media (min-width: $desktop) {
+	.main-page__nav-list {
+		.current {
+			border-color: #fff;
+		}
+	}
+	.main-page__nav-item__link {
+		font-size: 20px;
+		color: #fff;
 	}
 }
 
@@ -94,6 +201,21 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	@media (min-width: $tablet) {
+		max-width: 709px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		margin: 0 auto;
+	}
+	@media (min-width: $desktop) {
+		max-width: 1300px;
+		position: relative;
+		flex-direction: row;
+		margin: 0 auto;
+		padding: 0 40px;
+		box-sizing: border-box;
+	}
 }
 
 .main-page__title-block {
@@ -104,23 +226,15 @@
 	background: url(../images/Index/Head/Mobile/Background-mobile.jpg) no-repeat;
 	background-size: 100% auto;
 	background-position: center;
-}
-
-@media (min-width: 768px) {
-	.main-page__header-block {
-		max-width: 709px;
+	@media (min-width: $tablet) {
 		display: flex;
 		flex-direction: column;
-		position: relative;
-		margin: 0 auto;
-	}
-	.main-page__title-block {
-		display: flex;
-		flex-direction: column;
-		padding-left: 87px;
 		text-align: start;
 		color: #000;
 		background: none;
+	}
+	@media (min-width: $desktop) {
+		margin: 112px 0 0 80px;
 	}
 }
 
@@ -131,6 +245,16 @@
 	font-size: 36px;
 	font-weight: normal;
 	line-height: 40px;
+	@media (min-width: $tablet) {
+		margin: 0 0 47px 35px;
+		font-size: 60px;
+		line-height: 60px;
+	}
+	@media (min-width: $desktop) {
+		margin: 0;
+		margin-bottom: 38px;
+		padding: 0;
+	}
 }
 
 .main-page__title-two {
@@ -138,16 +262,20 @@
 	font-size: 14px;
 	font-weight: normal;
 	text-transform: uppercase;
+	@media (min-width: $tablet) {
+		margin-left: 37px;
+		font-size: 20px;
+	}
+	@media (min-width: $desktop) {
+		margin: 0;
+	}
 }
 
-@media (min-width: 768px) {
-	.main-page__title-one {
-		font-size: 60px;
-		margin-bottom: 35px;
-		line-height: 60px;
-	}
-	.main-page__title-two {
-		font-size: 20px;
+@media (min-width: $desktop) {
+	.block-right {
+		flex-grow: 1;
+		width: 50%;
+		height: 100%;
 	}
 }
 
@@ -155,14 +283,18 @@
 	width: 280px;
 	height: 271px;
 	margin-top: -136px;
-}
-
-@media (min-width: 768px) {
-	.main-page__img-product {
+	@media (min-width: $tablet) {
 		width: 709px;
 		height: 609px;
-		margin-left: -180px;
-		margin-top: -75px;
+		margin: -75px 0 0 -180px;
+	}
+	@media (min-width: $desktop) {
+		width: 552px;
+		height: 499px;
+		position: absolute;
+		top: 0;
+		left: 494px;
+		margin: 0;
 	}
 }
 
@@ -171,24 +303,25 @@
 	padding-left: 20px;
 	padding-right: 20px;
 	box-sizing: border-box;
+	@media (min-width: $tablet) {
+		width: 245px;
+		height: 52px;
+		position: absolute;
+		top: 262px;
+		left: 35px;
+		padding: 0;
+	}
+	@media (min-width: $desktop) {
+		left: 120px;
+		top: 356px;
+	}
 }
 
 .header-block__button {
 	font-family: "Oswald", sans-serif;
 	color: #fff;
 	text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-	.header-block__button-wrapper {
-		width: 245px;
-		height: 52px;
-		position: absolute;
-		top: 262px;
-		left: 45px;
-		padding: 0;
-	}
-	.header-block__button {
+	@media (min-width: $tablet) {
 		font-size: 20px;
 		font-weight: normal;
 	}

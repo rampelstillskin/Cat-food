@@ -40,8 +40,10 @@ td {
 	margin: -1px;
 }
 
+@import "variables";
 @import "font";
 @import "button";
 
 @import "index/head";
 @import "index/main";
+@import "index/footer";
