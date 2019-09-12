@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Cat-food</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen"/>
 </head>
 <body>
 	<header class="main-page__header">
@@ -138,11 +139,10 @@
 						<img src="images/Index/Before_after/Mobile/before-mobile.png" alt="Ваша кошка - До" class="before-after__img-mobile before-after__img-mobile-before">
 						<img src="images/Index/Before_after/Mobile/after-mobile.png" alt="Ваша кошка - После" class="before-after__img-mobile before-after__img-mobile-after">
 					</div>
-					<div class="before-after__tablet-desktop">
-						<img src="images/Index/Before_after/Tablet_Desktop/Before.png" alt="Ваша кошка - До" 
-						class="before-after__img before-after__img-before">
-						<img src="images/Index/Before_after/Tablet_Desktop/After.png" alt="Ваша кошка - После" class="before-after__img before-after__img-after ">
-						<input type="range" class="before-after__img-range">
+					<div id="container1" class="before-after__tablet-desktop">
+						<img src="images/Index/Before_after/Tablet_Desktop/Before.png" alt="Ваша кошка - До">
+						<img src="images/Index/Before_after/Tablet_Desktop/After.png" alt="Ваша кошка - После" class="before-after__img-after">
+						<span class="before-after__scroll-bar"></span>
 					</div>
 				</div>
 			</div>
@@ -192,6 +192,10 @@
 			</div>
 		</div>
 	</footer>
-	<script src="js/_modal.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/jquery.event.move.js" type="text/javascript"></script>
+	<script src="js/jquery.twentytwenty.js" type="text/javascript"></script>
+	<script src="js/twenty.js"></script>
+	<script src="js/modal.js"></script>
 </body>
 </html>

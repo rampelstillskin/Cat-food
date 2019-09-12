@@ -355,9 +355,11 @@
 		padding: 20px;
 	}
 	@media (min-width: $tablet) {
+		padding-bottom: 100px;
 		background: linear-gradient(#fff 400px, #f2f2f2 400px);
 	}
 	@media (min-width: $desktop) {
+		padding-bottom: 30px;
 		background: linear-gradient(#fff 180px, #f2f2f2 180px);
 	}
 }
@@ -376,6 +378,10 @@
 	.before-after__block-left {
 		position: relative;
 	}
+	.before-after__block-right {
+		width: 708px;
+		margin: 0 auto;
+	}
 }
 
 @media (min-width: $desktop) {
@@ -384,7 +390,7 @@
 		position: relative;
 	}
 	.before-after__block-right {
-		width: 50%;
+		width: 708px;
 	}
 }
 
@@ -516,10 +522,11 @@
 		}
 	}
 	@media (min-width: $desktop) {
+		flex-direction: row;
 		top: auto;
 		right: auto;
 		left: 0;
-		bottom: -80px;
+		bottom: -106px;
 		font-size: 20px;
 		font-weight: bold;
 		&-1 {
@@ -628,51 +635,49 @@
 	}
 }
 
-.before-after__tablet-desktop {
-	display: none;
-	@media (min-width: $tablet) {
-		display: flex;
-	}
-}
-
 .before-after__img-after {
 	display: none;
 }
 
 .before-after__tablet-desktop {
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	display: none;
+	@media (min-width: $tablet) {
+		display: flex;
+		justify-content: center;
+	}
 }
 
-.before-after__img-range {
-	position: relative;
-	margin: 14px 0 70px;
-	&::before {
-		content: "было";
+
+.before-after__scroll-bar {
+	width: 564px;
+	height: 6px;
+	display: block;
+	position: absolute;
+	bottom:	-68px;
+	background-color: #DCDCDC;
+	border-radius: 10px;
+	&::before,
+	&::after {
+		width: 51px;
+		height: 31px;
 		position: absolute;
-		left: -70px;
-		font-family: "Oswald", sans-serif;
-		font-size: 20px;
+		bottom: -16px;
 		text-transform: uppercase;
-		color: #000;
-		border-bottom: 1px dotted #DCDCDC;
+	}
+	&::before {
+		content: "Было";
+		left: -50px;
 	}
 	&::after {
-		content: "стало";
-		position: absolute;
-		right: -70px;
-		font-family: "Oswald", sans-serif;
-		font-size: 20px;
-		text-transform: uppercase;
-		color: #000;
-		border-bottom: 1px dotted #DCDCDC;
+		content: "Стало";
+		right: -67px;
 	}
 	@media (min-width: $desktop) {
-		margin: 0;
-		bottom: -40px;
+		left: 40px;
+		bottom: -83px;
 	}
 }
+
 
 // Блок Котакты
 
@@ -689,6 +694,7 @@
 	align-items: center;
 	margin: 26.3px 0 25px;
 	padding: 0 20px;
+	box-sizing: border-box;
 	@media (min-width: $tablet) {
 		justify-content: space-between;
 		margin: 64px 0;
@@ -701,7 +707,7 @@
 		left: 50%;
 		top: 50%;
 		margin: 0;
-		transform: translate( -85.7%, -50%);
+		transform: translate(-106.7%, -50%);
 		background-color: #fff;
 	}
 }
