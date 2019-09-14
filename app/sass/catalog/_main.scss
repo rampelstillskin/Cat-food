@@ -1,0 +1,366 @@
+.catalog-wrapper {
+	width: 100%;
+	border-bottom: 1px solid #F2F2F2;
+	@media (min-width: $tablet) {
+		border: none;
+	}
+	@media (min-width: $desktop) {
+		width: 1220px;
+	}
+}
+
+.catalog__title {
+	font-family: "Oswald", sans-serif;
+	font-size: 36px;
+	font-weight: normal;
+	margin-left: 20px;
+	@media (min-width: $tablet) {
+		margin-left: 30px;
+	}
+}
+
+.catalog__list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	@media (min-width: $tablet) {
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	@media (min-width: $desktop) {
+		justify-content: flex-start;
+	}
+}
+
+.catalog__item {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid #F2F2F2;
+	border-bottom: 1px solid #F2F2F2;
+	padding: 0 20px;
+	box-sizing: border-box;
+	@media (min-width: $tablet) {
+		width: 42%;
+		min-height: 431px;
+		justify-content: flex-end;
+		margin: 120px 30px 0;
+		padding: 0 40px;
+		background-color: #F2F2F2;
+		border: none;
+	}
+	@media (min-width: $desktop) {
+		width: 245px;
+	}
+}
+
+.catalog__item-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (min-width: $tablet) {
+		position: relative;
+		flex-direction: column;
+	}
+}
+
+@media (min-width: $tablet) {
+	.catalog__item__block-left {
+		position: absolute;
+		bottom: 187px;
+	}
+	.catalog__item__block-right {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.catalog__item__title {
+	margin: 0;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	@media (min-width: $tablet) {
+		width: 130px;
+		margin-bottom: 25px;
+		font-size: 20px;
+		font-weight: normal;
+		text-align: center;
+	}
+} 
+
+.catalog__item__description {
+	width: 140px;
+	display: flex;
+	justify-content: space-between;
+	@media (min-width: $tablet) {
+		width: 100%;
+		border-bottom: 1px solid #CDCDCD;
+	}
+}
+
+.catalog__item__description-block {
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	@media (min-width: $tablet) {
+		height: 31px;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.catalog__item__button {
+	margin: 10px 0 24px;
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #fff;
+	@media (min-width: $tablet) {
+		margin: 40px 0 33px;
+	}
+}
+
+.catalog__item-show {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 20px;
+	&::before,
+	&::after {
+		content: "";
+		width: 30px;
+		height: 2px; 
+		position: absolute;
+		top: 41px;
+		background-color: #F2F2F2; 
+	}
+	&::after {
+		transform: rotate(90deg);
+	}
+	@media (min-width: $tablet) {
+		width: 42%;
+		min-height: 431px;
+		justify-content: flex-end;
+		margin: 120px 30px 0;
+		padding: 0 40px;
+		box-sizing: border-box;
+		border: 1px solid #F2F2F2;
+		&::before,
+		&::after {
+			width: 60px;
+			top: 86px;
+		}
+	}
+}
+
+.catalog__item-show__title {
+	display: block;
+	&-1 {
+		margin: 79px 0 12px;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+	&-2 {
+		margin-bottom: 25px; 
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+	}
+	@media (min-width: $tablet) {
+		&-1 {
+			width: 140px;
+			text-align: center;
+		}
+		&-2 {
+			width: 170px;
+			text-align: center;
+		}
+	}
+}
+
+.catalog__item-show__button {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 25px;
+	border: none;
+	background-color: #F2F2F2;
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	@media (min-width: $tablet) {
+		margin: 40px 0 33px;
+	}
+}
+
+// Дополнительные товары
+
+.extra-wrapper {
+	overflow: hidden;
+	@media (min-width: $tablet) {
+		margin-bottom: 45px;
+	}
+}
+
+.extra-title {
+	position: relative;
+	margin-left: 20px;
+	font-family: "Oswald", sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	&::after {
+		content: "";
+		width: 100%;
+		height: 3px;
+		position: absolute;
+		top: 20px;
+		margin-left: 24px;
+		background-color: #68B738;
+	}
+	@media (min-width: $tablet) {
+		margin-left: 38px;
+		&::before {
+			content: "";
+			width: 100%;
+			height: 3px;
+			position: absolute;
+			top: 20px;
+			left: -100%;
+			margin-left: -20px;
+			background-color: #68B738;
+		}
+	}
+}
+
+.extra__list {
+	width: 100%;
+	padding: 0 20px;
+	box-sizing: border-box;
+	@media (min-width: $tablet) {
+		padding: 0 30px;
+	}
+}
+
+.extra__item {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #CDCDCD;
+	&:last-child {
+		margin-bottom: 39px;
+	}
+	@media (min-width: $tablet) {
+		margin: 0;
+		padding: 0 38px;
+		border: 1px solid #E8E8E8;
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 20px 0;
+		}
+	}
+}
+
+.extra__item-description-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin: 8px 0 14.5px;
+	font-family: Arial, Helvetica, sans-serif;
+	@media (min-width: $tablet) {
+		margin: 0;
+		font-size: 16px;
+	}
+}
+
+@media (min-width: $tablet) {
+	.extra__item-description:last-child {
+		margin-left: 52px;
+	}
+}
+
+.extra__item-title {
+	margin: 0;
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	@media (min-width: $tablet) {
+		font-size: 20px;
+	}
+}
+
+.extra__item__button {
+	margin-bottom: 17px;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.extra__img {
+	margin-bottom: 35px;
+	padding: 0 20px;
+	@media (min-width: $tablet) {
+		padding: 0 30px;
+	}
+}
+
+.extra__img__wrapper {
+	width: 100%;
+	min-height: 289px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	position: relative;
+	box-sizing: border-box;
+	background: url(../images/Catalog/Extra/Mobile/gift-photo-mobile.jpg.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	&::before {
+		content: "";
+		width: 55px;
+		height: 60px;
+		position: absolute;
+		top: 65px;
+		background: url(../images/Catalog/Extra/Mobile/gift.svg.svg) no-repeat;
+	}
+	@media (min-width: $tablet) {
+		min-height: 200px;
+		justify-content: flex-end;
+		align-items: center;
+		background: url(../images/Catalog/Extra/Tablet/gift-photo-tablet.jpg.jpg) no-repeat;background-position: center;
+		background-size: cover;
+		&::before {
+			left: 91px;
+		}
+	}
+}
+
+.extra__img__description {
+	width: 170px;
+	display: block;
+	position: relative;
+	bottom: 43px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	@media (min-width: $tablet) {
+		margin-right: 110px;
+		bottom: auto;
+		text-align: start;
+	}
+}
+
+// Контакты 
+
+.contacts {
+	background-color: #F2F2F2;
+}
+
+.contacts__invite-address__wrapper {
+	padding-top: 29px;
+	@media (min-width: $tablet) {
+		margin: 0;
+		padding: 60px 70px;
+	}
+}
