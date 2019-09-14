@@ -6,6 +6,7 @@
 	}
 	@media (min-width: $desktop) {
 		width: 1220px;
+		margin: 0 auto;
 	}
 }
 
@@ -17,6 +18,9 @@
 	@media (min-width: $tablet) {
 		margin-left: 30px;
 	}
+	@media (min-width: $desktop) {
+		font-size: 60px;
+	}
 }
 
 .catalog__list {
@@ -26,9 +30,10 @@
 	@media (min-width: $tablet) {
 		flex-flow: row wrap;
 		justify-content: center;
+		padding: 0 30px;
+		box-sizing: border-box;
 	}
 	@media (min-width: $desktop) {
-		justify-content: flex-start;
 	}
 }
 
@@ -41,16 +46,23 @@
 	padding: 0 20px;
 	box-sizing: border-box;
 	@media (min-width: $tablet) {
-		width: 42%;
+		width: 45%;
 		min-height: 431px;
 		justify-content: flex-end;
-		margin: 120px 30px 0;
+		margin: 120px 0 0;
 		padding: 0 40px;
 		background-color: #F2F2F2;
 		border: none;
+		&:nth-child(odd) {
+			margin-right: 60px;
+		}
 	}
 	@media (min-width: $desktop) {
 		width: 245px;
+		margin: 120px 60px 0 0;
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
 	}
 }
 
@@ -87,6 +99,7 @@
 		font-size: 20px;
 		font-weight: normal;
 		text-align: center;
+		line-height: 20px;
 	}
 } 
 
@@ -142,10 +155,10 @@
 		transform: rotate(90deg);
 	}
 	@media (min-width: $tablet) {
-		width: 42%;
+		width: 45%;
 		min-height: 431px;
 		justify-content: flex-end;
-		margin: 120px 30px 0;
+		margin: 120px 0 0;
 		padding: 0 40px;
 		box-sizing: border-box;
 		border: 1px solid #F2F2F2;
@@ -154,6 +167,10 @@
 			width: 60px;
 			top: 86px;
 		}
+	}
+	@media (min-width: $desktop) {
+		width: 245px;
+		margin: 120px 0 0;
 	}
 }
 
@@ -202,35 +219,45 @@
 	@media (min-width: $tablet) {
 		margin-bottom: 45px;
 	}
+	@media (min-width: $desktop) {
+		width: 1220px;
+		margin: 0 auto;
+		overflow: visible;
+	}
 }
 
 .extra-title {
-	position: relative;
+	display: flex;
+	align-items: center;
 	margin-left: 20px;
 	font-family: "Oswald", sans-serif;
 	font-size: 24px;
 	font-weight: normal;
+	background-color: #fff;
+	z-index: 10;
 	&::after {
 		content: "";
 		width: 100%;
 		height: 3px;
 		position: absolute;
-		top: 20px;
-		margin-left: 24px;
+		left: 0;
 		background-color: #68B738;
+		z-index: -1;
 	}
 	@media (min-width: $tablet) {
-		margin-left: 38px;
-		&::before {
-			content: "";
-			width: 100%;
-			height: 3px;
-			position: absolute;
-			top: 20px;
-			left: -100%;
-			margin-left: -20px;
-			background-color: #68B738;
-		}
+		width: 414px;
+		justify-content: center;
+		font-size: 36px;
+	}
+	@media (min-width: $desktop) {
+		width: 425px;
+		font-size: 36px;
+	}
+}
+
+@media (min-width: $desktop) {
+	.extra__list-wrapper {
+		display: flex;
 	}
 }
 
@@ -253,12 +280,39 @@
 		margin: 0;
 		padding: 0 38px;
 		border: 1px solid #E8E8E8;
-		&-wrapper {
+		&-block {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			margin: 20px 0;
 		}
+	}
+	@media (min-width: $desktop) {
+		width: 895px;
+		display: flex;
+		align-items: center;
+		padding: 0;
+		border: none;
+		border-bottom: 1px solid #E8E8E8;
+		&:first-child {
+			border-top: 1px solid #E8E8E8;
+		}
+		&:last-child {
+			margin-bottom: 86px;
+		}
+	}
+}
+
+.extra__item-title {
+	margin: 0;
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	@media (min-width: $tablet) {
+		font-size: 20px;
+	}
+	@media (min-width: $desktop) {
+		width: 325px;
 	}
 }
 
@@ -271,21 +325,24 @@
 		margin: 0;
 		font-size: 16px;
 	}
-}
+	@media (min-width: $desktop) {
 
-@media (min-width: $tablet) {
-	.extra__item-description:last-child {
-		margin-left: 52px;
 	}
 }
 
-.extra__item-title {
-	margin: 0;
-	font-family: "Oswald", sans-serif;
-	font-size: 16px;
-	text-transform: uppercase;
+.extra__item-description {
 	@media (min-width: $tablet) {
-		font-size: 20px;
+		&:last-child {
+			margin-left: 52px;
+		}
+	}
+	@media (min-width: $desktop) {
+		&:first-child {
+			width: 240px;
+		}
+		&:last-child {
+			margin: 0;
+		}
 	}
 }
 
@@ -294,6 +351,11 @@
 	font-size: 16px;
 	text-transform: uppercase;
 	color: #fff;
+	@media (min-width: $desktop) {
+		width: 245px;
+		margin: 0;
+		margin-left: auto;
+	}
 }
 
 .extra__img {
@@ -301,6 +363,10 @@
 	padding: 0 20px;
 	@media (min-width: $tablet) {
 		padding: 0 30px;
+	}
+	@media (min-width: $desktop) {
+		margin: 0;
+		padding: 0;
 	}
 }
 
@@ -332,6 +398,10 @@
 		&::before {
 			left: 91px;
 		}
+	}
+	@media (min-width: $desktop) {
+		width: 245px;
+		height: 280px;
 	}
 }
 
