@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cat-food</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="form-header">
+		<div class="form__header-wrapper">
+			<div class="main-page__nav-wrapper">
+				<a href="#" class="main-page__logo">
+					<picture>
+						<source media="(min-width: 1250px)" srcset="images/Index/Head/Desktop/logo-desktop.svg">
+						<source media="(min-width: 768px)" srcset="images/Index/Head/Tablet/logo-tablet.svg">
+						<img src="images/Index/Head/Mobile/main-logo-mobile.svg" srcset="" alt="Cat-food"	class="main-page__logo-img">
+					</picture>
+					<div class="main-page__logo-description">
+						<span class="logo-description__first-word">cat</span>
+						<span class="logo-description__second-word">energy</span>
+					</div>
+				</a>
+				<nav class="main-page__mobile-nav">
+					<ul class="main-page__mobile-nav__list">
+						<li class="main-page__mobile-nav__item"><a href="index.html">главная</a></li>
+						<li class="main-page__mobile-nav__item"><a href="catalog.html">каталог продукции</a></li>
+						<li class="main-page__mobile-nav__item"><a href="form.html">подбор программы</a></li>
+					</ul>
+					<button class="mobile-nav__button">
+						<span class="mobile-nav__burger"></span>
+					</button>
+				</nav>
+				<nav class="main-page__nav">
+					<ul class="main-page__nav-list">
+						<li class="main-page__nav-item">
+							<a href="index.html" class="main-page__nav-item__link">главная</a>
+						</li>
+						<li class="main-page__nav-item">
+							<a href="catalog.html" class="main-page__nav-item__link">каталог продукции</a>
+						</li>
+						<li class="main-page__nav-item current">
+							<a href="form.html" class="main-page__nav-item__link">подбор программы</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="order">
+			<div class="order-wrapper">
+				<div class="order__title-wrapper">
+					<h1 class="order__title">Подбор программы</h1>
+					<p class="order__description">
+						заполните анкету и мы подберем<br> программу питания для вашего кота
+					</p>
+				</div>
+				<form class="form">
+					<div class="customer-data__features__wrapper">
+						<div class="customer-data__list">
+							<label class="customer-data__item">
+								<span class="customer-data__description">имя:*</span>
+								<input type="text" class="customer-data__input input__name">
+							</label>
+							<label class="customer-data__item">
+								<span class="customer-data__description">вес (кг):*</span>
+								<input type="number" class="customer-data__input input__weight">
+							</label>
+							<label class="customer-data__item">
+								<span class="customer-data__description">возраст (лет):</span>
+								<input type="number" class="customer-data__input input__age">
+							</label>
+						</div>
+						<div class="features">
+							<label class="features__item">
+								<input type="radio" class="features__radio" name="radio-button" checked>
+								<span class="features__radio-custom"></span>
+								<span class="features__description">похудение</span>
+							</label>
+							<label class="features__item">
+								<input type="radio" class="features__radio" name="radio-button">
+								<span class="features__radio-custom"></span>
+								<span class="features__description">набор массы</span>
+							</label>
+							<label class="features__item">
+								<input type="radio" class="features__radio" name="radio-button">
+								<span class="features__radio-custom"></span>
+								<span class="features__description">не знаю (нужен ваш совет)</span>
+							</label>
+						</div>
+					</div>
+					<div class="contact-details">
+						<h3 class="contact-details__title">
+							Контактные данные<br> (владельца кота)
+						</h3>
+						<div class="contact__list-wrapper">
+							<div class="contact__list">
+								<label class="contact__item">
+									<span class="contact__item-description">e-mail*</span>
+									<input type="email" class="contact-details__input owner-email">
+								</label>
+								<label class="contact__item">
+									<span class="contact__item-description">телефон*</span>
+									<input type="text" class="contact-details__input owner-phone">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="comments">
+						<h3 class="comments-title">Комментарий</h3>
+						<div class="comments-textarea-wrapper">
+							<textarea name="" cols="30" rows="10" class="comments-textarea"></textarea>
+						</div>
+					</div>
+					<div class="additionally">
+						<h3 class="additionally__title">Дополнительно</h3>
+						<div class="additionally__list">
+							<label class="additionally__item">
+								<input type="checkbox" class="additionally-checkbox" checked>
+								<span class="additionally-checkbox__custom"></span>
+								<span class="additionally-description">сахарозаменитель</span>
+							</label>
+							<label class="additionally__item">
+								<input type="checkbox" class="additionally-checkbox">
+								<span class="additionally-checkbox__custom"></span>
+								<span class="additionally-description">питьевая вода</span>
+							</label>
+							<label class="additionally__item">
+								<input type="checkbox" class="additionally-checkbox">
+								<span class="additionally-checkbox__custom"></span>
+								<span class="additionally-description">молоко</span>
+							</label>
+							<label class="additionally__item">
+								<input type="checkbox" class="additionally-checkbox">
+								<span class="additionally-checkbox__custom"></span>
+								<span class="additionally-description">витамины</span>
+							</label>
+						</div>
+					</div>
+					<div class="button__obligatory-field__wrapper">
+						<div class="submit-button-wrapper">
+							<button class="button submit-button">отправить заявку</button>
+						</div>
+						<span class="obligatory-field">* - Обязательные поля</span>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="contacts">
+				<div class="contacts__wrapper">
+					<p class="contacts__invite-address__wrapper">
+						<span class="contacts__invite">
+							приглашаем к сотрудничеству дилеров!
+						</span>
+						<span class="contacts__address">Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</span>
+					</p>
+					<picture>
+						<source media="(min-width: 1250px)" srcset="images/Index/Contacts/Desktop/map-desktop.jpg">
+						<source media="(min-width: 768px)" srcset="images/Index/Contacts/Tablet/map-tablet.jpg">
+						<img src="images/Index/Contacts/Mobile/map-mobile-1.jpg" alt="Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" class="contacts__img-map">
+					</picture>
+				</div>
+			</section>
+		</main>
+		<footer class="footer__block">
+			<div class="footer__wrapper">
+				<div class="footer__link-block">
+					<a href="#" class="footer__link">
+						<span class="footer__link-block__one">cat</span>
+						<span class="footer__link-block__two">energy</span>
+					</a>
+				</div>
+				<div class="footer__socials-block">
+					<ul class="footer__social-icons">
+						<li class="footer__social-icons__item">
+							<a href="#" class="footer__vk">
+								<span class="visually-hidden">Вконтакте</span>
+							</a>
+						</li>
+						<li class="footer__social-icons__item">
+							<a href="#" class="footer__insta">
+								<span class="visually-hidden">Инстаграм</span>
+							</a>
+						</li>
+						<li class="footer__social-icons__item">
+							<a href="#" class="footer__fb">
+								<span class="visually-hidden">Фейсбук</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>
