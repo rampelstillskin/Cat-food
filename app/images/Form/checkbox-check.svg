@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Group_12" data-name="Group 12" transform="translate(-20 -1321)">
+    <image id="checkbox" width="30" height="30" transform="translate(20 1321)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABHNCSVQICAgIfAhkiAAAAF9JREFUSInt1qERwkAURdFDZg0g6WT7b2G3EUAmuExMcDhmvnq3gWPvZYzxwlVtn4Y7HsXwu2GH3vtWIc45b9iXCuxXgQMHDhw4cODAgQMH/r/2xc/Dr2ppWPEsRGE9AE0xEOt1xn3XAAAAAElFTkSuQmCC"/>
+    <g id="tick.svg">
+      <g id="tick.svg-2" data-name="tick.svg" transform="translate(25 1328)">
+        <path id="Path_20" data-name="Path 20" d="M19.98,0,7.692,13.721,1.02,6.271,0,7.41l7.59,8.476.1.113L20.9,1.253l.1-.114Z"/>
+      </g>
+      <path id="Color_Overlay" data-name="Color Overlay" d="M32.59,1343.886,25,1335.41l1.02-1.139,6.673,7.45L44.979,1328,46,1329.14l-.1.113L32.693,1344Z" fill="#68b738"/>
+    </g>
+  </g>
+</svg>
