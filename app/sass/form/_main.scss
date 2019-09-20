@@ -101,14 +101,32 @@
 }
 
 .customer-data__input {
-	flex-grow: 1;
-	margin-left: 14px;
 	height: 45px;
+	margin-left: 14px;
+	flex-grow: 1;
+	padding-left: 15px;
 	border: none;
 	border: 1px solid $frame-color;
+	box-sizing: border-box;
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	outline: none;
+	&:invalid {
+		border: 1px solid #FF8282;
+	}
+	&:hover {
+		border: 1px solid #CDCDCD;
+	}
+	&:active,
+	&:focus {
+		border: 1px solid #444444;
+	}
 	@media (min-width: $tablet) {
 		height: 52px;
-		margin-left: 15.8px
+		margin-left: 15.8px;
+		padding-left: 19px;
+		font-size: 20px;
 	}
 }
 
@@ -170,6 +188,12 @@
 	left: 0;
 	background: url(../images/Form/radiobutton.svg) no-repeat;
 	background-size: 30px;
+	&:hover {
+		background: url(../images/Form/radiobutton_hover.svg) no-repeat;
+	}
+	&:active {
+		opacity: .3;
+	}
 	@media (min-width: $tablet) {
 		width: 40px;
 		height: 40px;
@@ -179,8 +203,14 @@
 }
 
 .features__radio:checked + .features__radio-custom {
-	background: url(../images/Form/radiobutton-check.svg) no-repeat;
+	background: url(../images/Form/radiobutton_check.svg) no-repeat;
 	background-size: 30px;
+	&:hover {
+		background: url(../images/Form/radiobutton_check_hover.svg) no-repeat;
+	}
+	&:active {
+		opacity: .3;
+	}
 	@media (min-width: $tablet) {
 		background-size: 40px;
 	}
@@ -279,8 +309,28 @@
 	height: 45px;
 	flex-grow: 1;
 	margin-left: 12px;
+	padding-left: 15px;
 	border: none;
 	border: 1px solid $frame-color;
+	box-sizing: border-box;
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	outline: none;
+	&:invalid {
+		border: 1px solid #FF8282;
+	}
+	&:hover {
+		border: 1px solid #CDCDCD;
+	}
+	&:active,
+	&:focus {
+		border: 1px solid #444444;
+	}
+	@media (min-width: $tablet) {
+		font-size: 20px;
+		padding-left: 19px;
+	}
 }
 
 .owner-email {
@@ -288,6 +338,17 @@
 	background: url(../images/Form/mail.svg) no-repeat;
 	background-position: 96% center;
 	background-size: 17px 13px;
+	&:active,
+	&:focus {
+		background: url(../images/Form/mail.focus.svg) no-repeat;
+		background-position: 96% center;
+		background-size: 17px 13px;
+	}
+	&:invalid {
+		background: url(../images/Form/mail.invalid.svg) no-repeat;
+		background-position: 96% center;
+		background-size: 17px 13px;
+	}
 }
 
 .owner-phone {
@@ -335,12 +396,20 @@
 
 .comments-textarea {
 	width: 100%;
+	padding: 12px 0 0 15px;
+	box-sizing: border-box;
 	border: none;
 	border: 1px solid $frame-color;
+	font-family: "Oswald", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
 	@media (min-width: $tablet) {
 		margin: 45px 0;
+		padding: 12px 0 0 19px;
+		font-size: 20px;
 	}
 	@media (min-width: $desktop) {
+		margin: 0;
 	}
 }
 
@@ -411,17 +480,44 @@
 	top: -3px;
 	left: 0;
 	background: url(../images/Form/checkbox.svg) no-repeat;
+	background-size: 30px;
+	&:hover {
+		background: url(../images/Form/checkbox_hover.svg) no-repeat;
+		background-size: 30px;
+	}
+	&:active {
+		opacity: .3;
+	}
 	@media (min-width: $tablet) {
-		top: 0;
+		width: 40px;
+		height: 40px;
+		top: -5px;
+		left: 0;
+		background-size: 40px;
+		&:hover {
+			background-size: 40px;
+		}
 	}
 }
 
 .additionally-checkbox:checked + .additionally-checkbox__custom {
-	background: url(../images/Form/checkbox-check.svg) no-repeat;
+	background: url(../images/Form/checkbox_check.svg) no-repeat;
+	&:hover {
+		background: url(../images/Form/checkbox_check_hover.svg) no-repeat;
+	}
+	&:active {
+		opacity: .3;
+	}
+	@media (min-width: $tablet) {
+		background-size: 40px;
+	}
 }
 
 .additionally-description {
 	margin-left: 45px;
+	@media (min-width: $tablet) {
+		margin-left: 55px;
+	}
 }
 
 .button__obligatory-field__wrapper {
