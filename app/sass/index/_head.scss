@@ -42,6 +42,12 @@
 	align-items: center;
 	margin: 0 0 0 20px;
 	padding: 0;
+	&:hover {
+		opacity: .8;
+	}
+	&:active {
+		opacity: .6;
+	}
 	@media (min-width: $tablet) {
 		margin-left: 31px;
 	}
@@ -196,6 +202,12 @@
 	.main-page__nav-item__link {
 		font-size: 20px;
 		color: #fff;
+		&:hover {
+			opacity: .6;
+		}
+		&:active {
+			opacity: .3;
+		}
 	}
 }
 
