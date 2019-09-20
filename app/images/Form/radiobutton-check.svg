@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-  <g id="Group_13" data-name="Group 13" transform="translate(-20 -646)">
-    <g id="radiobutton" transform="translate(20 646)" fill="rgba(0,0,0,0)" stroke="#cdcdcd" stroke-linejoin="round" stroke-width="1">
-      <circle cx="15" cy="15" r="15" stroke="none"/>
-      <circle cx="15" cy="15" r="14.5" fill="none"/>
-    </g>
-    <circle id="radiobutton-2" data-name="radiobutton" cx="6" cy="6" r="6" transform="translate(29 655)" fill="#68b738"/>
-  </g>
-</svg>
