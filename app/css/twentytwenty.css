@@ -76,7 +76,7 @@
   border: 1px solid #CDCDCD;
 	border-radius: 50%;
 	background-color: #fff;
-  box-shadow: 0px 2px 5px rgb(0, 0, 0, .6);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, .6);
   z-index: 40;
 	cursor: pointer;
 }
@@ -85,6 +85,13 @@
 	.twentytwenty-handle {
 		margin-left: 35px;
 		bottom: -95px;
+	}
+	.twentytwenty-handle:hover {
+		box-shadow: 0px 3px 5px rgba(0, 0, 0, .7);
+	}
+	.twentytwenty-handle:active {
+		border: 2px solid #68B738;
+		box-shadow: 0px 4px 5px rgba(0, 0, 0, .7);
 	}
 }
 
