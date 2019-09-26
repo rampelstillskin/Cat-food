@@ -662,11 +662,13 @@
 	border-radius: 10px;
 	&::before,
 	&::after {
-		width: 51px;
+		width: 38px;
 		height: 31px;
 		position: absolute;
 		bottom: -16px;
 		text-transform: uppercase;
+		text-align: center;
+		border-bottom: 1px dashed rgba(#707070, .2);
 	}
 	&::before {
 		content: "Было";

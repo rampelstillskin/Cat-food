@@ -188,6 +188,7 @@
 	left: 0;
 	background: url(../images/Form/radiobutton.svg) no-repeat;
 	background-size: 30px;
+	cursor: pointer;
 	&:hover {
 		background: url(../images/Form/radiobutton_hover.svg) no-repeat;
 	}
@@ -265,6 +266,8 @@
 	}
 	@media (min-width: $desktop) {
 		width: 1220px;
+		position: relative;
+		left: -11px;
 		margin: 23px auto 30px;
 		padding-left: 20px;
 		background-color: #fff;
@@ -391,6 +394,7 @@
 	@media (min-width: $desktop) {
 		width: 1220px;
 		margin: 45px auto;
+		padding: 0;
 	}
 }
 
@@ -481,6 +485,7 @@
 	left: 0;
 	background: url(../images/Form/checkbox.svg) no-repeat;
 	background-size: 30px;
+	cursor: pointer;
 	&:hover {
 		background: url(../images/Form/checkbox_hover.svg) no-repeat;
 		background-size: 30px;
