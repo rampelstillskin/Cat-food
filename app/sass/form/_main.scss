@@ -459,7 +459,7 @@
 
 .additionally__item {
 	@extend .customer-data__description;
-	width: 30%;
+	width: 50%;
 	position: relative;
 	margin: 0 20px 20px;
 	@media (min-width: $tablet) {
@@ -508,7 +508,7 @@
 .additionally-checkbox:checked + .additionally-checkbox__custom {
 	background: url(../images/Form/checkbox_check.svg) no-repeat;
 	&:hover {
-		background: url(../images/Form/checkbox_check_hover.svg) no-repeat;
+		background: url(../images/Form/checkbox_check.svg) no-repeat;
 	}
 	&:active {
 		opacity: .3;
