@@ -10,8 +10,6 @@
 	}
 }
 
-
-
 .catalog__title {
 	font-family: "Oswald", sans-serif;
 	font-size: 36px;
@@ -178,7 +176,7 @@
 		width: 45%;
 		min-height: 431px;
 		justify-content: flex-end;
-		margin: 120px auto 0 24px;
+		margin: 120px 0 0;
 		padding: 0 40px;
 		box-sizing: border-box;
 		border: 1px solid $frame-color;
