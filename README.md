@@ -1,9 +1,9 @@
-# cat-food.github.io
-Responsive site
+# Адаптивный сайт магазина "Еда для кошек".
+#### Responsive site
 
-Адаптивный сайт магазина "Еда для кошек".
 
-Gulp скрипты:
+
+## Gulp скрипты:
 imageOptimize: build project to dist folder (cleanup, image optimize, removing unnecessary files);
 serve: project deployment on the server from dist folder via FTP;
 build: project deployment on the server from dist folder via RSYNC;
