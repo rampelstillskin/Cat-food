@@ -52,3 +52,9 @@
 	top: 40%;
 	left: 39%;
 }
+@media (max-width: 1250px) {
+	.twentytwenty-handle{
+		top: 109%;
+		margin-left: 60px;
+	}
+}
