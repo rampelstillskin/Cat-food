@@ -2,7 +2,6 @@
 #### Responsive site
 
 
-
 ## Gulp скрипты:
 * **imageOptimize:** Оптимизация картинок;
 * **serve:** Минификация, компиляция sass и live-server;
