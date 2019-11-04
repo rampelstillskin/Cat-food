@@ -1,6 +1,6 @@
 const gulp 							= require('gulp'),
 			autoprefixer 			= require('gulp-autoprefixer'),
-			browserSync 			= require('browser-sync').create(),
+			browserslist 			= require('browser-sync').create(),
 			plumber 					= require('gulp-plumber'),
 			sass 							= require('gulp-sass'),
 			minify						= require('gulp-csso'),
@@ -17,7 +17,7 @@ gulp.task('sass', () => gulp.src('app/sass/**/*.scss')
     browsers: ['last 5 versions'],
   }))
   .pipe(gulp.dest('app/css'))
-  .pipe(browserSync.stream())
+  .pipe(browserslist.stream())
   .pipe(sass({
     outputStyle: 'compressed' })
     .on('error', sass.logError)));
@@ -36,13 +36,13 @@ gulp.task('images', () => gulp.src('app/images/**/*.{png,svg,jpg}')
   .pipe(gulp.dest('app/images')));
 
 gulp.task('serve', () => {
-  browserSync.init({
+  browserslist.init({
     server: {
       baseDir: './app',
     },
   });
   gulp.watch('app/sass/**/*.scss', gulp.series('sass'));
-  gulp.watch('app/*.html').on('change', browserSync.reload);
+  gulp.watch('app/*.html').on('change', browserslist.reload);
 });
 
 gulp.task('copy', () => gulp.src([
@@ -57,5 +57,6 @@ gulp.task('copy', () => gulp.src([
   .pipe(gulp.dest('build')));
 
 
-gulp.task('default', gulp.parallel('minify', 'sass', 'serve'));
+gulp.task('optimizeImages', gulp.parallel('images'));
+gulp.task('serve', gulp.parallel('minify', 'sass', 'serve'));
 gulp.task('build', gulp.series('clean', 'copy', 'sass', 'images'));
