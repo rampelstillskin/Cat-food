@@ -9,4 +9,4 @@
 * **serve:** Минификация, компиляция sass и live-server;
 * **build:** Финальная сборка: чистка мусора, оптимизация картинок, компиляция sass и копирование в папку(build);
 
-[Демо сайта](https://rampelstillskin.github.io/cat-food.github.io/build/)
+[Демо сайта](https://rampelstillskin.github.io/cat-food/build/)
